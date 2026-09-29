@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="Poros provides perception-enabled, real-time auditory guidance to help blind and low vision users operate household appliances independently. TVCG · ISMAR 2026.">
+  <meta property="og:title" content="Poros — Perception-Enabled Interactive Assistance">
+  <meta property="og:description" content="Supporting independent appliance use by blind and low vision users. A TVCG / ISMAR 2026 research project.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/teaser.webp">
+  <title>Poros · TVCG / ISMAR 2026</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Poros home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 27V7h10a8 8 0 0 1 0 16h-3v-6h3a2 2 0 0 0 0-4h-4v14Z" fill="currentColor"/><circle cx="25" cy="5" r="3" fill="#bdcba8"/></svg>poros<span class="brand-dot">.</span></a>
+      <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Results</a><a href="#resources">Resources <span aria-hidden="true">↗</span></a></nav>
+      <span class="nav-edition">ISMAR ’26</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="paper-title">
+      <div class="publication"><span class="status-dot" aria-hidden="true"></span> ACCEPTED TO IEEE TVCG <span class="publication-divider">/</span> ISMAR 2026</div>
+      <div class="hero-wordmark" aria-hidden="true">Poros<span>.</span><svg class="wordmark-spark" viewBox="0 0 48 48"><path d="M24 3v10M24 35v10M3 24h10M35 24h10M9 9l7 7M32 32l7 7M9 39l7-7M32 16l7-7"/></svg></div>
+      <h1 id="paper-title"><span class="sr-only">Poros: </span>Perception-Enabled Interactive Assistance<br class="desktop-break"> for Appliance Use by<br class="desktop-break"> <span>Blind and Low Vision Users</span></h1>
+      <p class="hero-summary">From knowing what to do, to knowing how to do it.<br>Real-time guidance for more independent everyday interactions.</p>
+      <div class="authors" aria-label="Paper authors">
+        <a href="mailto:shenyuxin@bit.edu.cn">Yuxin Shen<sup>1,*</sup></a>
+        <a href="mailto:lianqi277@gmail.com">Anqi Li<sup>1,2,*</sup></a>
+        <a href="mailto:zhaowenxuan@hypergryph.com">Wenxuan Zhao<sup>1,3</sup></a>
+        <a href="mailto:liangwei@bit.edu.cn">Wei Liang<sup>1,†</sup></a>
+      </div>
+      <p class="affiliations"><span><sup>1</sup> Beijing Institute of Technology</span><span><sup>2</sup> Institute of Computing Technology, Chinese Academy of Sciences</span><span><sup>3</sup> Shanghai HyperGryph Network Technology Co., Ltd.</span></p>
+      <p class="author-note">* Equal contribution <span>·</span> † Corresponding author</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#resources" id="paper-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Zm0 0v6h5M9 13h6M9 17h6"/></svg><span id="paper-button-label">Paper</span><span class="button-note" id="paper-button-note">Coming soon</span></a>
+        <a class="button" href="#video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 10 6-10 6Z"/><circle cx="12" cy="12" r="10"/></svg>Video<span class="button-note" id="video-button-note">Coming soon</span></a>
+        <a class="button button-cite" href="#citation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H4v7h5v7H4M20 5h-5v7h5v7h-5"/></svg>BibTeX</a>
+      </div>
+    </section>
+
+    <section class="container teaser-section" aria-labelledby="teaser-title">
+      <figure class="teaser-frame">
+        <div class="figure-topline"><span id="teaser-title"><span class="status-dot" aria-hidden="true"></span> A LITTLE GUIDANCE. MORE INDEPENDENCE.</span><span class="figure-tag">POROS IN ACTION</span></div>
+        <button class="figure-zoom" type="button" data-figure="assets/images/teaser.webp" aria-label="Enlarge the Poros usage scenario"><img src="assets/images/teaser.webp" width="2600" height="560" alt="A user wearing a HoloLens asks to heat a cup of milk. Poros guides their hand left, right, and down while checking material readiness, 80 percent power, and a five-minute time setting. The user then enjoys the heated milk." fetchpriority="high"><span class="zoom-hint" aria-hidden="true">↗</span></button>
+        <figcaption><span class="figure-number">FIG. 01</span><span>A spoken goal becomes a sequence of guided actions. Poros observes, guides, and checks—until the task is complete.</span></figcaption>
+      </figure>
+      <div class="topic-strip"><span>ACCESSIBILITY</span><span aria-hidden="true">+</span><span>AUGMENTED REALITY</span><span aria-hidden="true">+</span><span>HUMAN–AI INTERACTION</span></div>
+    </section>
+
+    <section class="section container overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-label"><span>01 / OVERVIEW</span><span class="label-line"></span></div>
+      <div class="overview-grid"><div><h2 id="overview-title">Everyday appliances.<br><em>Everyday independence.</em></h2><p class="large-copy">A flat touch panel. An unreadable display. A sequence of steps to remember.</p><p>Modern appliances can turn everyday tasks into accessibility barriers. Poros connects appliance knowledge with real-time perception, helping blind and low vision (BLV) users understand what to do, find the right control, and confirm what happened.</p></div><div class="abstract"><h3>Abstract</h3><p>Modern home appliances pose significant accessibility barriers for individuals with visual impairments, driven by increasing functional complexity and minimalist design trends. Drawing on formative interviews with blind and low vision (BLV) participants, we propose Poros, a novel system providing perception-enabled interactive assistance to facilitate seamless appliance interaction.</p><p>Our approach features an automated instruction generator that models appliance operation logic directly from user manuals to synthesize executable guidance for arbitrary tasks. Integrated into an Augmented Reality (AR) wearable, Poros provides real-time auditory feedback synchronized with the user’s hand gestures and the appliance’s display state. A user study with quantitative analysis and qualitative insights shows that our approach enhances user independence, enabling the successful execution of complex, multi-step operations that were previously considered inaccessible.</p></div></div>
+    </section>
+
+    <section class="video-section" id="video" aria-labelledby="video-title"><div class="container">
+      <div class="section-heading"><div><div class="section-label">02 / SEE IT IN ACTION</div><h2 id="video-title">Guidance in the moment.</h2></div><p>From a spoken request<br>to a completed everyday task.</p></div>
+      <div class="video-stage" id="video-stage"><div class="video-placeholder" id="video-placeholder"><div class="video-orbit" aria-hidden="true"><div class="play-mark"><svg viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></svg></div><span class="orbit-dot"></span></div><p class="video-kicker">THE POROS EXPERIENCE</p><h3>A closer look is on its way.</h3><p>Our project video will appear here.</p><span class="coming-label">VIDEO COMING SOON</span></div><div class="video-bottom"><span><span class="status-dot" aria-hidden="true"></span> PERCEPTION → GUIDANCE → ACTION</span><span>PROJECT FILM / FORTHCOMING</span></div></div>
+    </div></section>
+
+    <section class="section container" id="method" aria-labelledby="method-title">
+      <div class="section-heading"><div><div class="section-label">03 / HOW IT WORKS</div><h2 id="method-title">Understand. Guide. Verify.</h2></div><p>A continuous loop between<br>the user, the appliance, and Poros.</p></div>
+      <div class="method-steps"><article><div class="step-heading"><span class="step-number">01</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 5h14l6 6v16H6ZM20 5v7h6M11 17h10M11 22h7"/></svg></div><h3>Understand the task</h3><p>Model appliance logic from its manual. Turn a user’s goal into an executable sequence of button presses.</p><span class="step-tag">MANUAL → ACTION PLAN</span></article><article><div class="step-heading"><span class="step-number">02</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16h22M20 9l7 7-7 7M9 7v4M9 21v4"/></svg></div><h3>Guide each action</h3><p>Track the user’s hand with a HoloLens headset. Provide directional auditory cues to reach and activate the right control.</p><span class="step-tag">PERCEPTION → AUDIO GUIDANCE</span></article><article><div class="step-heading"><span class="step-number">03</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 16 4 4 8-8"/><circle cx="16" cy="16" r="12"/></svg></div><h3>Verify and adapt</h3><p>Read the appliance display, compare it with the intended state, and provide corrective guidance when needed.</p><span class="step-tag">STATE FEEDBACK → NEXT STEP</span></article></div>
+      <figure class="research-figure"><button class="figure-zoom" type="button" data-figure="assets/images/system.webp" aria-label="Enlarge the Poros system overview"><img src="assets/images/system.webp" width="2600" height="662" alt="Poros system overview: an instruction generator models task states; hand observations produce fine-grained directional audio; appliance observations check actual states and trigger corrective feedback." loading="lazy"><span class="zoom-hint" aria-hidden="true">↗</span></button><figcaption><span class="figure-number">FIG. 02</span><span>The Poros pipeline connects instruction generation, operation guidance, and appliance-state assessment.</span></figcaption></figure>
+      <details class="method-detail"><summary><span><span class="detail-index">A CLOSER LOOK</span> From appliance manuals to executable instructions</span><span class="detail-plus" aria-hidden="true">+</span></summary><div class="detail-content"><p>The instruction generator extracts buttons, task chains, and parameter-update rules from appliance manuals. These form an operation state machine, refined through validation on the physical appliance. For a given task, the system computes a sequence of button presses to reach the target settings.</p><figure><button class="figure-zoom" type="button" data-figure="assets/images/instruction-generation.webp" aria-label="Enlarge the instruction-generation diagram"><img src="assets/images/instruction-generation.webp" width="2410" height="840" alt="The appliance panel and operating instructions feed a generator that extracts buttons, task chains, and rules, producing a formal representation of appliance operations." loading="lazy"></button><figcaption>Button extraction, task extraction, and rule extraction form a structured appliance model.</figcaption></figure><p class="detail-stat"><strong>89.8%</strong> task-chain extraction accuracy across 59 operation procedures from nine appliance manuals.</p></div></details>
+    </section>
+
+    <section class="results-section" id="results" aria-labelledby="results-title"><div class="container section">
+      <div class="section-heading"><div><div class="section-label">04 / USER STUDY</div><h2 id="results-title">More confidence.<br><em>More possibilities.</em></h2></div><p>Evaluated with BLV participants,<br>on simple and complex microwave tasks.</p></div>
+      <div class="stats"><div><span class="stat-value">100<span>%</span></span><h3>Task success with Poros</h3><p>Across both simple and hard tasks<br>in the analyzed study trials.</p></div><div><span class="stat-value">5<span>/5</span></span><h3>Median confidence</h3><p>For both task difficulty levels<br>when using Poros.</p></div><div><span class="stat-value">0</span><h3>Help requests on hard tasks</h3><p>With step-by-step guidance<br>and state-based error recovery.</p></div></div>
+      <div class="results-context"><p>We compared Poros with <strong>tactile markers</strong> and the <strong>conventional appliance interface</strong>. Fourteen BLV participants were recruited; valid trials from 12 participants for simple tasks and 10 for hard tasks were analyzed after incomplete sessions due to technical issues were excluded.</p><p>Poros supported successful task completion and higher confidence, especially on hard tasks. Completion times were numerically lower than with markers, but the differences were not statistically significant.</p></div>
+      <figure class="research-figure results-figure"><button class="figure-zoom" type="button" data-figure="assets/images/study-results.webp" aria-label="Enlarge the study results chart"><img src="assets/images/study-results.webp" width="2600" height="591" alt="Results compare confidence, help requests, and task success. Poros achieved 100 percent success on simple and hard tasks, versus 75 and 70 percent for markers, and 25 and 0 percent for the conventional interface." loading="lazy"><span class="zoom-hint" aria-hidden="true">↗</span></button><figcaption><span class="figure-number">FIG. 03</span><span>Confidence, help requests, and success rates for Poros, Marker, and Conventional conditions.</span></figcaption></figure>
+      <blockquote><span class="quote-mark" aria-hidden="true">“</span><p>The speech guidance gives me peace of mind, even if something goes wrong, it will help me to correct it in time.</p><footer>PARTICIPANT P08 <span> / </span> USER STUDY</footer></blockquote>
+      <p class="study-scope"><strong>Study scope.</strong> The user study evaluated one microwave model. Broader appliance categories and reductions in appliance-specific setup are directions for future work.</p>
+    </div></section>
+
+    <section class="section container" id="resources" aria-labelledby="resources-title">
+      <div class="section-heading"><div><div class="section-label">05 / EXPLORE THE RESEARCH</div><h2 id="resources-title">Read. Watch. Build on it.</h2></div><p>Research materials<br>in one place.</p></div>
+      <div class="resource-list"><div class="resource-row" id="paper-resource"><span class="resource-index">01</span><div><h3>Research paper</h3><p>IEEE Transactions on Visualization and Computer Graphics · ISMAR 2026</p></div><span class="resource-status" id="paper-resource-action">Coming soon</span></div><a class="resource-row" href="#video"><span class="resource-index">02</span><div><h3>Project video</h3><p>Watch the Poros interaction and guidance workflow.</p></div><span class="resource-status" id="video-resource-status">Coming soon <span aria-hidden="true">↗</span></span></a></div>
+      <div class="citation" id="citation"><div class="citation-header"><h3>Cite this work</h3><button id="copy-citation" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></svg><span>Copy BibTeX</span></button></div><pre><code id="bibtex">@article{shen2026poros,
+  title   = {Poros: Perception-Enabled Interactive Assistance
+             for Appliance Use by Blind and Low Vision Users},
+  author  = {Shen, Yuxin and Li, Anqi and Zhao, Wenxuan and Liang, Wei},
+  journal = {IEEE Transactions on Visualization and Computer Graphics},
+  year    = {2026},
+  note    = {Accepted for publication}
+}</code></pre><p class="citation-note">Accepted manuscript. DOI, volume, and page numbers will be added when available.</p><p class="sr-only" id="copy-status" role="status" aria-live="polite"></p></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><div><a class="brand footer-brand" href="#top">poros<span class="brand-dot">.</span></a><p>Supporting independence, one interaction at a time.</p></div><div class="footer-meta"><span>TVCG · ISMAR 2026</span><p>Supported in part by the National Key R&D Program of China<br>(2022ZD0114900).</p><a href="mailto:shenyuxin@bit.edu.cn">Get in touch <span aria-hidden="true">↗</span></a></div></div></footer>
+  <dialog class="image-dialog" id="image-dialog" aria-label="Enlarged research figure"><div class="dialog-toolbar"><p>RESEARCH FIGURE</p><button type="button" id="close-dialog" aria-label="Close enlarged figure">Close <span aria-hidden="true">×</span></button></div><img id="dialog-image" alt=""><p class="dialog-caption" id="dialog-caption"></p></dialog>
+</body>
+</html>
