@@ -14,22 +14,19 @@ python3 -m http.server 8080
 
 打开 http://localhost:8080 。也可直接打开 `index.html`；复制功能推荐在 localhost 或 HTTPS 下使用。
 
-## 添加论文和视频
+## 添加论文
 
-编辑 `site-config.js`。链接留空时，页面显示 Coming soon；填写后，论文按钮和资源列表会自动启用，视频占位区域自动变成播放器。
+编辑 `site-config.js`。链接留空时，页面显示 Coming soon；填写后，论文按钮和资源列表会自动启用。
 
 ```js
 window.POROS_CONFIG = Object.freeze({
   paperUrl: "assets/papers/poros.pdf",
-  videoUrl: "assets/videos/poros.mp4",
-  videoPoster: "",        // 可选：视频封面图片路径
-  videoCaptions: "",      // 可选：英文 WebVTT 字幕路径
 });
 ```
 
 - 论文：把最终要公开的 PDF 放到 `assets/papers/poros.pdf`，或填写外部 HTTPS 链接。
-- 视频：支持 MP4、YouTube 和 Vimeo 链接（包括 Vimeo 非公开链接的 hash）。大视频推荐放视频平台，避免 GitHub 单文件大小限制。
-- 当前没有公开论文 PDF 或视频，所提供的 camera-ready PDF 仅用于核对内容。
+- 三段演示视频已放在 `assets/videos/`，网页使用 `preload="none"`，只在用户播放时加载视频内容。
+- 当前没有公开论文 PDF，所提供的 camera-ready PDF 仅用于核对内容。
 - 最终 DOI、卷号、页码公布后，更新 `index.html` 中的 BibTeX 和相关提示。
 
 ## GitHub Pages

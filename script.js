@@ -27,64 +27,6 @@ if (paperUrl) {
   get("paper-resource-action").replaceChildren(link);
 }
 
-function videoEmbed(url) {
-  const host = url.hostname.replace(/^www\./, "");
-  if (["youtube.com", "m.youtube.com", "youtube-nocookie.com", "youtu.be"].includes(host)) {
-    const id = host === "youtu.be" ? url.pathname.split("/")[1] : url.searchParams.get("v") || url.pathname.match(/^\/(?:embed|shorts)\/([^/]+)/)?.[1];
-    if (/^[\w-]{11}$/.test(id || "")) return `https://www.youtube-nocookie.com/embed/${id}`;
-  }
-  if (["vimeo.com", "player.vimeo.com"].includes(host)) {
-    const match = url.pathname.match(/^\/(?:video\/)?(\d+)(?:\/([a-zA-Z0-9]+))?\/?$/);
-    if (match) {
-      const embed = new URL(`https://player.vimeo.com/video/${match[1]}`);
-      const hash = url.searchParams.get("h") || match[2];
-      if (hash) embed.searchParams.set("h", hash);
-      return embed.href;
-    }
-  }
-  return null;
-}
-
-const videoUrl = safeUrl(config.videoUrl);
-if (videoUrl) {
-  const embed = videoEmbed(videoUrl);
-  const player = document.createElement(embed ? "iframe" : "video");
-  player.title = "Poros project video";
-  if (embed) {
-    player.src = embed;
-    player.allow = "fullscreen; picture-in-picture; encrypted-media";
-    player.allowFullscreen = true;
-    player.loading = "lazy";
-    player.referrerPolicy = "strict-origin-when-cross-origin";
-  } else {
-    player.controls = true;
-    player.playsInline = true;
-    player.preload = "metadata";
-    player.src = videoUrl.href;
-    const poster = safeUrl(config.videoPoster);
-    if (poster) player.poster = poster.href;
-    const captions = safeUrl(config.videoCaptions);
-    if (captions) {
-      const track = document.createElement("track");
-      track.kind = "captions";
-      track.label = "English";
-      track.srclang = "en";
-      track.src = captions.href;
-      track.default = true;
-      player.append(track);
-    }
-    const fallback = document.createElement("a");
-    fallback.href = videoUrl.href;
-    fallback.textContent = "Download the Poros project video";
-    player.append(fallback);
-  }
-  get("video-placeholder").replaceWith(player);
-  get("video-stage").classList.add("has-video");
-  get("video-button-note").remove();
-  get("video-resource-status").textContent = "Watch video ↗";
-  document.querySelector(".video-bottom > span:last-child").textContent = "POROS / PROJECT FILM";
-}
-
 const dialog = get("image-dialog");
 let lastFigureTrigger = null;
 document.querySelectorAll("[data-figure]").forEach((trigger) => {
