@@ -16,17 +16,17 @@ python3 -m http.server 8080
 
 ## 添加论文
 
-编辑 `site-config.js`。链接留空时，页面显示 Coming soon；填写后，论文按钮和资源列表会自动启用。
+当前页面使用 `assets/papers/poros-camera-ready.pdf`。后续替换正式版本时，可直接覆盖这个同名文件；如果改用出版社链接，再编辑 `site-config.js`。
 
 ```js
 window.POROS_CONFIG = Object.freeze({
-  paperUrl: "assets/papers/poros.pdf",
+  paperUrl: "assets/papers/poros-camera-ready.pdf",
 });
 ```
 
-- 论文：把最终要公开的 PDF 放到 `assets/papers/poros.pdf`，或填写外部 HTTPS 链接。
+- 论文：当前为 camera-ready PDF；正式出版后可覆盖同名文件，或填写外部 HTTPS 链接。
 - 三段演示视频已放在 `assets/videos/`，网页使用 `preload="none"`，只在用户播放时加载视频内容。
-- 当前没有公开论文 PDF，所提供的 camera-ready PDF 仅用于核对内容。
+- 当前网站公开提供 camera-ready PDF 下载。
 - 最终 DOI、卷号、页码公布后，更新 `index.html` 中的 BibTeX 和相关提示。
 
 ## GitHub Pages
